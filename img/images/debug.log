@@ -1,0 +1,2 @@
+[0125/123915.062:INFO:CONSOLE(1)] "Long rAF frame-time", source: file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js (1)
+[0125/133318.018:ERROR:gl_surface_egl.cc(537)] EGL Driver message (Error) eglQueryDeviceAttribEXT: Bad attribute.
