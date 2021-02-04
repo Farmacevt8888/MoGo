@@ -1,8 +1,8 @@
 /* обнуление стилей */
-@import "./style/nullstyle.css";
+@import "../style/nullstyle.css";
 /* =================================================================================== */
 /* подключаем шрифты. */
-@import "./style/fonts.css";
+@import "../style/fonts.css";
 /* =================================================================================== */
 
 body {
@@ -108,7 +108,7 @@ hr {
    flex-direction: column;
    justify-content: center;
 
-   background: url("./img/images/intro_01.jpg") center no-repeat;
+   background: url("../img/images/intro_01.jpg") center no-repeat;
    background-size: cover;
 }
 
@@ -228,7 +228,7 @@ hr {
    margin-bottom: 30px;
    padding-bottom: 0;
 
-   background: url("./img/images/design/background.jpg") center no-repeat;
+   background: url("../img/images/design/background.jpg") center no-repeat;
    -webkit-background-size: cover;
    background-size: cover;
 }
