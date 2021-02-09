@@ -8,26 +8,17 @@
 body {
    font-family: "Montserrat";
    font-size: 15px;
-   line-height: 1.6;
+   line-height: 1.2;
    color: #333333;
 }
 /* =================================================== */
-
-hr {
-   display: block;
-   width: 100%;
-   height: 1px;
-   margin: 40px 0;
-
-   border: 0;
-   background-color: #e5e5e5;
-}
 
 /* Container */
 .container {
    width: 100%;
    max-width: 1200px;
    margin: 0 auto;
+   padding: 0 15px;
 }
 /* =================================================== */
 
@@ -102,7 +93,7 @@ hr {
 /* Intro */
 .intro {
    width: 100%;
-   height: 1000px;
+   height: 100vh;
 
    position: relative;
 
@@ -295,11 +286,13 @@ hr {
 
 .card {
    display: flex;
+   flex-wrap: wrap;
    justify-content: space-between;
-   margin-top: 80px;
+   margin: 80px -15px 0;
 }
 .card__item {
-   width: 377px;
+   width: 33.33333%;
+   padding: 0 15px;
 }
 
 .card_inner {
@@ -326,6 +319,8 @@ hr {
 }
 
 .card__img img {
+   display: block;
+
    transition: opacity 0.1s linear;
 
    max-width: 100%;
@@ -377,6 +372,7 @@ hr {
 
 .stat {
    display: flex;
+   flex-wrap: wrap;
 }
 
 .stat__item {
@@ -411,13 +407,18 @@ hr {
 
 .services {
    display: flex;
+   flex-wrap: wrap;
 }
 .services__item {
-   flex: 1 1 0;
+   width: 33.3333%;
 
-   padding-left: 70px;
-   padding-right: 20px;
+   margin-bottom: 30px;
+   padding: 0px 35px 30px 85px;
    position: relative;
+}
+
+.services__item--border {
+   border-bottom: 1px solid #e5e5e5;
 }
 
 .services__icon {
@@ -451,6 +452,8 @@ hr {
 
 .devices__item {
    display: block;
+   max-width: 100%;
+   height: auto;
 }
 
 .devices__item--iphone {
@@ -464,10 +467,19 @@ hr {
 /* We Do */
 .wedo {
    display: flex;
+   flex-wrap: wrap;
+   margin: 0 -15px;
 }
 
 .wedo__item {
-   flex: 1 1 0;
+   width: 50%;
+   padding: 0 15px;
+}
+
+.wedo__image {
+   display: block;
+   max-width: 100%;
+   height: auto;
 }
 /* ======================================================= */
 
@@ -1081,10 +1093,6 @@ hr {
 
 /* Blogs  */
 
-.blogs {
-
-}
-
 .blogs__item {
    display: flex;
    align-items: center;
@@ -1132,11 +1140,9 @@ hr {
 }
 
 .instagram__item {
-   width: 33.3333%;
-   /* border-bottom: 1px solid #fff; */
-   width: 88px;
-   height: 88px;
-   margin-bottom: 2px;
+   width: 33.33333%;
+   border: 1px solid #fff;
+   border-bottom: none;
 }
 
 .instagram__item img {
@@ -1152,9 +1158,188 @@ hr {
    text-align: center;
    color: #333;
    font-size: 14px;
-
 }
 
 .copyright span {
    color: #f38181;
+}
+
+/* ============================================== */
+
+/* MEDIA  */
+@media (max-width: 1230px) {
+   /* intro  */
+   .intro__suptitle {
+      font-size: 52px;
+   }
+
+   .intro__title {
+      font-size: 120px;
+   }
+}
+/* ====================================== */
+
+@media (max-width: 990px) {
+   /* intro  */
+   .intro__suptitle {
+      font-size: 32px;
+   }
+
+   .intro__title {
+      font-size: 80px;
+   }
+
+   /* Statistics  */
+
+   .stat {
+      justify-content: center;
+   }
+
+   .stat__item {
+      flex: none;
+      width: 33.3333%;
+
+      padding: 30px 0px;
+
+      border: 0;
+   }
+
+   .stat__item:last-child {
+      border-right: 0;
+   }
+
+   /* Services */
+   .services__item {
+      width: 50%;
+      padding-bottom: 0;
+   }
+
+   .services__item--border {
+      border-bottom: 0;
+   }
+}
+/* ========================================= */
+
+@media (max-width: 770px) {
+   /* Nav  */
+   .nav {
+      display: none;
+   }
+
+   /* Section  */
+
+   .section {
+      padding: 40px;
+   }
+
+   .section--devices {
+      padding-bottom: 0;
+   }
+
+   /* Card  */
+
+   .card {
+      justify-content: center;
+      margin-top: 50px;
+   }
+
+   .card__item {
+      width: 100%;
+      max-width: 410px;
+      margin-bottom: 30px;
+   }
+
+   .card__item:last-child {
+      margin-bottom: 0;
+   }
+
+   /* Slider  */
+   .slider__text {
+      display: none;
+   }
+
+   .slider__item.active::before {
+      width: 50%;
+   }
+
+   /* Services  */
+   .services {
+      justify-content: center;
+   }
+   .services__item {
+      width: 100%;
+      max-width: 400px;
+      padding-left: 55px;
+      padding-right: 0;
+   }
+
+   .services__icon {
+      left: 0;
+   }
+
+   /* Wedo */
+   .wedo__image {
+      display: none;
+   }
+
+   .wedo__item {
+      width: 100%;
+   }
+}
+/* ======================================= */
+
+@media (max-width: 575px) {
+   /* intro  */
+
+   .intro__suptitle {
+      font-size: 22px;
+   }
+
+   .intro__title {
+      font-size: 40px;
+   }
+
+   /* Section  */
+
+   .section__suptitle {
+      font-size: 20px;
+   }
+
+   .section__title {
+      font-size: 24px;
+   }
+
+   .section__title::after {
+      margin: 20px auto;
+   }
+
+   .section__header {
+      margin-bottom: 30px;
+   }
+
+   /* Statistics  */
+   .stat__item {
+      width: 100%;
+
+      border-bottom: 1px solid #bdece4;
+   }
+
+   .stat__item:last-child {
+      border-bottom: 0;
+   }
+
+   .stat__count {
+      font-size: 52px;
+   }
+
+   /* Devices */
+   .devices {
+      width: 320px;
+   }
+
+   .devices__item--iphone {
+      width: 180px;
+      bottom: -50px;
+      right: -80px;
+   }
 }
