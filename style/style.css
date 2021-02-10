@@ -295,7 +295,7 @@ body {
    padding: 0 15px;
 }
 
-.card_inner {
+.card__inner {
    position: relative;
    background-color: #95e1d3;
 }
